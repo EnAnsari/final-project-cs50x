@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Respond to Ticket</h2>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ ticket.title }}</h5>
+      <p class="card-text"><strong>Message:</strong> {{ ticket.message }}</p>
+      <form method="POST">
+        <div class="form-group">
+          <label for="response">Response</label>
+          <textarea name="response" id="response" class="form-control" rows="4">{{ ticket.response or '' }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-success mt-2">Submit Response</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

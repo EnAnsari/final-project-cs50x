@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Flask specific
+instance/
+.webassets-cache
+*.log
+
+# C and WebAssembly
+*.o
+*.out
+*.wasm
+*.wast
+*.js.map
+*.js.mem
+*.dSYM/
+*.exe
+*.dll
+*.so
+*.a
+
+# Node.js (if using npm for frontend)
+node_modules/
+package-lock.json
+yarn.lock
+
+# HTML/CSS/JS
+*.min.js
+*.min.css
+*.map
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+*.env
+venv/
+
+# Other
+*.bak
+*.tmp
+*.tmp.*

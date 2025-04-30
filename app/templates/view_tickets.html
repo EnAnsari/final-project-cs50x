@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>All Tickets</h2>
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Title</th>
+        <th>Message</th>
+        <th>Response</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ticket in tickets %}
+      <tr>
+        <td>{{ ticket.author.username }}</td>
+        <td>{{ ticket.title }}</td>
+        <td>{{ ticket.message }}</td>
+        <td>{{ ticket.response or 'No response yet' }}</td>
+        <td>
+          <a href="{{ url_for('admin.respond_ticket', ticket_id=ticket.id) }}" class="btn btn-sm btn-primary">Respond</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
